@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elevá - Tu negocio elevado al siguiente nivel</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+    </style>
+</head>
+<body class="bg-white">
+    <!-- Hero Section -->
+    <section class="bg-gradient-to-r from-blue-600 to-blue-800 text-white py-20">
+        <div class="container mx-auto px-6 text-center">
+            <h1 class="text-5xl font-bold mb-6">Tu negocio elevado al siguiente nivel</h1>
+            <p class="text-xl mb-8 max-w-2xl mx-auto">
+                Crea tu propia web de citas para barberías, salones y spas sin saber programar. 
+                Atrae más clientes y organiza tu agenda automáticamente.
+            </p>
+            <button onclick="openRegisterModal()" class="bg-white text-blue-600 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-blue-50 transition duration-300">
+                Crear mi página gratis
+            </button>
+        </div>
+    </section>
+
+    <!-- Cómo funciona -->
+    <section class="py-20 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center mb-12">Cómo funciona</h2>
+            <div class="grid md:grid-cols-2 gap-12">
+                <div class="text-center">
+                    <div class="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <span class="text-2xl">🤖</span>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-4">Modo IA Rápido</h3>
+                    <p class="text-gray-600">Responde preguntas simples y nuestra IA crea tu página automáticamente en 2 minutos.</p>
+                </div>
+                <div class="text-center">
+                    <div class="bg-green-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <span class="text-2xl">🎨</span>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-4">Modo Manual Shopify</h3>
+                    <p class="text-gray-600">Arrastra y suelta elementos para diseñar tu página exactamente como quieres.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Planes -->
+    <section class="py-20">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center mb-12">Elige tu plan</h2>
+            <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+                <!-- Plan Gratis -->
+                <div class="border border-gray-200 rounded-lg p-8">
+                    <h3 class="text-2xl font-bold mb-4">Gratis</h3>
+                    <p class="text-4xl font-bold mb-6">$0<span class="text-lg text-gray-600">/mes</span></p>
+                    <ul class="space-y-3 mb-8">
+                        <li>✅ Página personalizada básica</li>
+                        <li>✅ 1 empleado incluido</li>
+                        <li>✅ Hasta 30 citas/mes</li>
+                        <li>✅ Plantillas básicas</li>
+                        <li>✅ Dominio eleva.site</li>
+                        <li>❌ Publicidad pequeña</li>
+                    </ul>
+                    <button onclick="openRegisterModal()" class="w-full bg-gray-100 text-gray-800 py-3 rounded-lg font-semibold hover:bg-gray-200">
+                        Empezar gratis
+                    </button>
+                </div>
+
+                <!-- Plan Pro -->
+                <div class="border-2 border-blue-500 rounded-lg p-8 bg-blue-50">
+                    <h3 class="text-2xl font-bold mb-4">Pro</h3>
+                    <p class="text-4xl font-bold mb-6">$29<span class="text-lg text-gray-600">/mes</span></p>
+                    <ul class="space-y-3 mb-8">
+                        <li>✅ Sin publicidad</li>
+                        <li>✅ Citas ilimitadas</li>
+                        <li>✅ Hasta 10 empleados</li>
+                        <li>✅ Plantillas premium</li>
+                        <li>✅ Dominio personalizado</li>
+                        <li>✅ IA avanzada</li>
+                    </ul>
+                    <button onclick="openRegisterModal()" class="w-full bg-blue-600 text-white py-3 rounded-lg font-semibold hover:bg-blue-700">
+                        Probar Pro 14 días
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modal de Registro -->
+    <div id="registerModal" class="fixed inset-0 bg-black bg-opacity-50 hidden items-center justify-center z-50">
+        <div class="bg-white rounded-lg p-8 max-w-md w-full mx-4">
+            <h3 class="text-2xl font-bold mb-6">Crear tu cuenta Elevá</h3>
+            <form id="registerForm">
+                <div class="mb-4">
+                    <label class="block text-gray-700 mb-2">Nombre de tu negocio</label>
+                    <input type="text" id="businessName" class="w-full border border-gray-300 rounded-lg px-4 py-3" required>
+                </div>
+                <div class="mb-4">
+                    <label class="block text-gray-700 mb-2">Email</label>
+                    <input type="email" id="email" class="w-full border border-gray-300 rounded-lg px-4 py-3" required>
+                </div>
+                <div class="mb-6">
+                    <label class="block text-gray-700 mb-2">Contraseña</label>
+                    <input type="password" id="password" class="w-full border border-gray-300 rounded-lg px-4 py-3" required>
+                </div>
+                <button type="submit" class="w-full bg-blue-600 text-white py-3 rounded-lg font-semibold hover:bg-blue-700">
+                    Crear mi página
+                </button>
+            </form>
+            <button onclick="closeRegisterModal()" class="w-full mt-4 text-gray-600 py-2">
+                Cancelar
+            </button>
+        </div>
+    </div>
+
+    <script>
+        // Funciones del modal
+        function openRegisterModal() {
+            document.getElementById('registerModal').classList.remove('hidden');
+            document.getElementById('registerModal').classList.add('flex');
+        }
+
+        function closeRegisterModal() {
+            document.getElementById('registerModal').classList.add('hidden');
+            document.getElementById('registerModal').classList.remove('flex');
+        }
+
+        // Registro de usuario
+        document.getElementById('registerForm').addEventListener('submit', async function(e) {
+            e.preventDefault();
+            
+            const businessName = document.getElementById('businessName').value;
+            const email = document.getElementById('email').value;
+            const password = document.getElementById('password').value;
+            
+            // Aquí conectarías con Firebase
+            alert(`¡Cuenta creada para ${businessName}! Redirigiendo al dashboard...`);
+            closeRegisterModal();
+        });
+    </script>
+</body>
+</html>
